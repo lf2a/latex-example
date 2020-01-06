@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\usepackage{enumitem}
+\usepackage[portuguese]{babel}
+
+\begin{document}
+\begin{itemize}
+	\item Um
+	\item Dois
+	\item Tres
+\end{itemize}
+
+\newpage
+
+\begin{enumerate}
+	\item Um
+	\item Dois
+	\item Tres
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}[label=\arabic*)]
+	\item One
+	      \begin{enumerate}[label=\alph*)]
+	      	\item Two
+	      	\item Three
+	      	\item Four
+	      \end{enumerate}
+	\item Five
+	\item Six
+\end{enumerate}
+\end{document}

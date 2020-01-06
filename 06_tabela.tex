@@ -1,0 +1,85 @@
+\documentclass{article}
+
+\usepackage{multirow}
+\usepackage[portuguese]{babel}
+
+\begin{document}
+
+\begin{appendix}
+	\listoftables
+	\newpage
+\end{appendix}
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{l|l|l}
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3} \\
+			\hline
+			1                & 1110.1           & a                \\
+			2                & 10.1             & b                \\
+			3                & 23.113231        & c                \\
+		\end{tabular}
+		\caption{Primeira tabela.}
+		\label{tab:table1}
+	\end{center}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{l|l|l}
+			\textbf{Value 1}       & \textbf{Value 2} & \textbf{Value 3} \\
+			\hline
+			\multirow{2}{*}{teste} & 1110.1           & a                \\ % <-- Combining 2 rows with arbitrary with (*) and content 12
+			                       & 10.1             & b                \\ % <-- Content of first column omitted.
+			\hline
+			3                      & 23.113231        & c                \\
+			4                      & 25.113231        & d                \\
+		\end{tabular}
+		\caption{Multiplas linhas.}
+		\label{tab:table1}
+	\end{center}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{l|l|l}
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3} \\
+			\hline
+			\multicolumn{2}{c|}{12} & a\\ 
+			\hline
+			2                & 10.1             & b                \\
+			3                & 23.113231        & c                \\
+			4                & 25.113231        & d                \\
+		\end{tabular}
+		\caption{Multiplas colunas.}
+		\label{tab:table1}
+	\end{center}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{l|l|l}
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3} \\
+			\hline
+			\multicolumn{2}{c|}{\multirow{2}{*}{1234}} & a\\
+			\multicolumn{2}{c|}{} & b\\
+			\hline
+			3                & 23.113231        & c                \\
+			4                & 25.113231        & d                \\
+		\end{tabular}
+		\caption{Multiplas linhas e colunas.}
+		\label{tab:table1}
+	\end{center}
+\end{table}
+
+\newpage
+
+
+
+\end{document}
